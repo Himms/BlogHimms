@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
-from himms.views import frontpage
+from himms.views import frontpage, post_detail
 from himms.views import register_request
 
 
@@ -24,4 +24,5 @@ urlpatterns = [
     path('', frontpage, name = 'frontpage'),
     path('admin/', admin.site.urls),
     path("register", register_request, name="register"),
+    path('<slug:slug>/', post_detail, name = 'post_detail')
 ]

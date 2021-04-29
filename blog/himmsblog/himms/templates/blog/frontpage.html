@@ -8,6 +8,7 @@
         <small> {{ post.date_added }}</small>
         <p> <strong>{{ post.author }}</strong> </p>
         <p>{{ post.body }}</p>
+        <a href="{% url 'post_detail' post.slug %}">Add Comment</a>
     </div>
  
  {% endfor %}
